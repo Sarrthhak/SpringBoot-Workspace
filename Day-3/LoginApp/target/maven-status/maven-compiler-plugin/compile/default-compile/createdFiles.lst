@@ -1,0 +1,5 @@
+com\example\demo\User.class
+com\example\demo\DataInitializer.class
+com\example\demo\LoginAppApplication.class
+com\example\demo\LoginController.class
+com\example\demo\UserRepository.class

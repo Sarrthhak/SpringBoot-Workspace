@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="User dashboard home page. Welcome back.">
+    <title>Dashboard - LoginApp</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <!-- Animated decorative circles -->
+    <div class="background-decorations">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+
+    <main class="card-container" style="max-width: 500px;">
+        <div class="welcome-container">
+            <div class="welcome-icon">👋</div>
+            <h1 class="welcome-title">Login Successful!</h1>
+            <p class="welcome-desc">
+                Welcome, <strong th:text="${username != null ? username : 'User'}" style="color: #a78bfa;">Admin</strong>! 
+                You have successfully authenticated into your secure account dashboard.
+            </p>
+
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="db-icon">DB</div>
+                    <div class="db-content">
+                        <h3>Database Connection</h3>
+                        <p>Oracle Database (Active)</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <div class="db-icon">SEC</div>
+                    <div class="db-content">
+                        <h3>Session Security</h3>
+                        <p>SSL Encryption Enabled</p>
+                    </div>
+                </div>
+            </div>
+
+            <a th:href="@{/}" class="btn-logout" id="logout-btn">Log Out</a>
+        </div>
+    </main>
+
+</body>
+</html>

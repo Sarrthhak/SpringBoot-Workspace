@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register a new account on our platform. Access features and personalize your profile.">
+    <title>Create Account - LoginApp</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <!-- Animated decorative circles -->
+    <div class="background-decorations">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+
+    <main class="card-container">
+        <header class="card-header">
+            <h1>Get Started</h1>
+            <p>Create a secure new account today</p>
+        </header>
+
+        <!-- Error Alerts -->
+        <div th:if="${error}" class="alert alert-error" id="signup-error-alert">
+            <span>⚠️</span>
+            <span th:text="${error}">Error details here</span>
+        </div>
+
+        <form th:action="@{/signup}" method="post" id="signup-form">
+            <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <div class="input-wrapper">
+                    <input type="text" 
+                           id="username" 
+                           name="username" 
+                           class="form-input" 
+                           placeholder="Choose a username" 
+                           required 
+                           autocomplete="username" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-wrapper">
+                    <input type="password" 
+                           id="password" 
+                           name="password" 
+                           class="form-input" 
+                           placeholder="••••••••" 
+                           required 
+                           autocomplete="new-password" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <div class="input-wrapper">
+                    <input type="password" 
+                           id="confirmPassword" 
+                           name="confirmPassword" 
+                           class="form-input" 
+                           placeholder="••••••••" 
+                           required 
+                           autocomplete="new-password" />
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit" id="signup-submit-btn">Register</button>
+        </form>
+
+        <footer class="card-footer">
+            Already have an account? <a th:href="@{/}" id="login-link">Log In</a>
+        </footer>
+    </main>
+
+</body>
+</html>
