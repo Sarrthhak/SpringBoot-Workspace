@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<title>School Portal</title>
+
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background: #f4f7fb;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+
+
+		/* Top bar */
+
+		.header {
+
+			height: 80px;
+			background: white;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 40px;
+			box-shadow: 0px 2px 8px gray;
+
+		}
+
+
+		/* left */
+
+		.logo-text {
+
+			font-size: 28px;
+			font-weight: bold;
+			color: #1d3557;
+
+		}
+
+
+		/* center navigation */
+
+		.nav a {
+
+			text-decoration: none;
+			margin: 0 15px;
+			color: #333;
+			font-size: 18px;
+
+		}
+
+
+		.nav a:hover {
+
+			color: blue;
+
+		}
+
+
+		/* right logo */
+
+		.logo img {
+
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+
+		}
+
+
+
+		/* Main content */
+
+		.content {
+
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			min-height: 600px;
+
+		}
+
+
+		.content img {
+
+		    width: 400px;
+		    height: 250px;
+		    object-fit: cover;
+		    border-radius: 15px;
+		    margin-bottom: 20px;
+
+		}
+
+
+		.content h3 {
+
+			font-size: 32px;
+
+		}
+
+
+		.content p {
+
+			font-size: 20px;
+			max-width: 600px;
+			text-align: center;
+
+		}
+
+
+		/* Footer */
+
+		.footer {
+
+			height: 70px;
+			background: #1d3557;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+
+		.footer a {
+
+			color: white;
+			margin: 0 20px;
+			text-decoration: none;
+			font-size: 18px;
+
+		}
+	</style>
+
+</head>
+
+
+<body>
+
+
+
+	<!-- Header -->
+
+	<div class="header">
+
+
+		<div class="logo-text">
+			School Portal
+		</div>
+
+
+
+		<div class="nav">
+
+			<a href="/">Home</a>
+
+			<a href="/about">About</a>
+
+			<a href="/contact">Contact</a>
+
+			<a href="/student">Student</a>
+
+		</div>
+
+
+
+		<div class="logo">
+
+			<img src="https://i.pinimg.com/1200x/8d/61/5f/8d615f5648a1ca22e698640b3a9df929.jpg">
+
+		</div>
+
+
+	</div>
+
+
+
+
+	<!-- Main -->
+
+	<div class="content">
+
+
+		<!-- common image -->
+
+		<img th:src="${image}">
+
+
+
+		<h3 th:text="${title}"></h3>
+
+
+
+		<p th:text="${message}"></p>
+
+
+
+
+		<div th:if="${name}">
+
+
+			<p>
+				Name:
+				<span th:text="${name}"></span>
+			</p>
+
+
+			<p>
+				Email:
+				<span th:text="${email}"></span>
+			</p>
+
+
+			<p>
+				Semester:
+				<span th:text="${semester}"></span>
+			</p>
+
+
+			<p>
+				College:
+				<span th:text="${college}"></span>
+			</p>
+
+
+		</div>
+
+
+
+	</div>
+
+
+
+
+
+	<!-- Footer -->
+
+
+	<div class="footer">
+
+
+		<a href="https://www.instagram.com/sarrthhak/">Instagram</a>
+
+		<a href="https://www.linkedin.com/in/sarrthakk/?skipRedirect=true">LinkedIn</a>
+
+		<a href="https://github.com/Sarrthhak">GitHub</a>
+
+
+	</div>
+
+
+
+</body>
+
+</html>
