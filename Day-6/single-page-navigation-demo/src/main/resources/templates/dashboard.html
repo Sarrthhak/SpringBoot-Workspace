@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>School Portal</title>
+</head>
+
+<body>
+
+	<h2>School Portal</h2>
+
+	<a href="/">Home</a>
+	<a href="/about">About</a>
+	<a href="/contact">Contact</a>
+	<a href="/student">Student</a>
+
+	<br><br>
+
+	<h3 th:text="${title}"></h3>
+
+
+	<p th:text="${message}"></p>
+
+
+	<div th:if="${name}">
+
+		<p>Name: <span th:text="${name}"></span></p>
+
+		<p>Email: <span th:text="${email}"></span></p>
+
+		<p>Semester: <span th:text="${semester}"></span></p>
+
+		<p>College: <span th:text="${college}"></span></p>
+
+	</div>
+
+
+</body>
+
+</html>
