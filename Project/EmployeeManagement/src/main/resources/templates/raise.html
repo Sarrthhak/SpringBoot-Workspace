@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+
+
+	<h2>Raise Salary</h2>
+
+
+	<!-- Error message -->
+	<h3 style="color:red" th:text="${error}"></h3>
+
+
+	<form action="/raise" method="post">
+
+
+		Employee ID:
+
+		<input type="number" name="id">
+
+
+		<br><br>
+
+
+		Increment Amount:
+
+		<input type="number" name="amount">
+
+
+		<br><br>
+
+
+		<button>
+			Raise Salary
+		</button>
+
+
+	</form>
+
+
+	<br>
+
+	<a href="/">
+		Back to Menu
+	</a>
+
+
+</body>
+
+</html>

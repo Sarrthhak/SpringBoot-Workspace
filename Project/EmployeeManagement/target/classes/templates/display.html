@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Employee Details</title>
+</head>
+
+
+<body>
+
+
+	<h2>Employee Details</h2>
+
+
+	<table border="1">
+
+
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Designation</th>
+			<th>Salary</th>
+		</tr>
+
+
+
+		<tr th:each="emp : ${employees}">
+
+
+			<td th:text="${emp.id}"></td>
+
+			<td th:text="${emp.name}"></td>
+
+			<td th:text="${emp.age}"></td>
+
+			<td th:text="${emp.designation}"></td>
+
+			<td th:text="${emp.salary}"></td>
+
+
+		</tr>
+
+
+	</table>
+
+
+
+	<br><br>
+
+
+	<h3>
+		Do you want to continue?
+	</h3>
+
+
+	<a href="/">
+		<button>
+			YES
+		</button>
+	</a>
+
+
+
+	<a href="/exit">
+		<button>
+			NO
+		</button>
+	</a>
+
+
+
+</body>
+
+</html>
